@@ -1,0 +1,21 @@
+
+.event-info--title {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.event-item-title h3, .offset-wrapper h3, .page-intro h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width: 900px){
+
+
+.event-info--title, h1 {
+    font: 3.125em/1.2 Georgia,serif;
+    text-align:center;
+}
+}

@@ -35,9 +35,9 @@ module.exports = {
     },
     // CSS
     { 
-      test: /\.styl$/, 
+      test: /\.css/, 
       include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
+      loader: 'style-loader!css!'
     }
     ]
   }

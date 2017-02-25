@@ -6,4 +6,6 @@ Then run `npm start` and open <localhost:7770> in your browser.
 
 ## Production Build
 
-Run `npm build` to create a distro folder and a bundle.js file.
+Run `npm create` to create a production build
+
+URL:  188.226.163.24/react/sliders

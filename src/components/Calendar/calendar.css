@@ -1,0 +1,35 @@
+.left-hand-side {
+    width: 90%;
+    float: left;
+}
+
+.events-list {
+    margin-bottom: 5em;
+}
+
+
+.calender-header {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    line-height: 1;
+}
+
+
+
+h2 {
+    font: 1.75rem/1.2 Georgia,serif;
+}
+
+ol, ul {
+    list-style: none;
+    padding-left:12px;
+}
+
+@media screen and (max-width: 900px){
+  .left-hand-side {
+      width: 100%;  
+  }
+}

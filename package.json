@@ -7,6 +7,7 @@
     "build": "npm run clean && npm run build:webpack",
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf dist",
+    "create": "react-scripts build",
     "start": "node devServer.js",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
   },
@@ -16,7 +17,6 @@
   },
   "author": "garethrobertlee",
   "license": "MIT",
-  "homepage": "188.226.163.24",
   "dependencies": {
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",
@@ -58,6 +58,7 @@
     "expect-jsx": "^2.5.1",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^15.2.2",
+    "react-scripts": "^0.9.0",
     "rimraf": "^2.6.1"
   }
 }

@@ -1,0 +1,23 @@
+.site-wrapper {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.clear:after{content:'';display:table;clear:both}
+
+*,:after,:before{box-sizing:border-box}
+
+a {
+    text-decoration: none;
+}
+
+
+h3 {
+    font: 1.063rem/1.25 "Lucida Console",Monaco,monospace;
+}
+
+@media screen and (max-width: 900px){
+	.site-wrapper {
+	    padding: 0 30px;
+	}
+}

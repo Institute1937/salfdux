@@ -8,4 +8,4 @@ Then run `npm start` and open <localhost:7770> in your browser.
 
 Run `npm create` to create a production build
 
-URL:  https://salfdux-cxjxcapkqn.now.sh
+URL:  https://salfdux.now.sh

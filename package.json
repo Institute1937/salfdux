@@ -36,7 +36,7 @@
     "raven-js": "^3.17.0",
     "react": "^15.2.2",
     "react-addons-css-transition-group": "^15.2.2",
-    "react-dom": "^15.2.2",
+    "react-dom": "^16.0.0",
     "react-icons": "^2.2.3",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",

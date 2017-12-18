@@ -54,7 +54,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
-    "expect": "^21.0.2",
+    "expect": "^22.0.0",
     "expect-jsx": "^3.0.0",
     "mocha": "^3.5.3",
     "react-addons-test-utils": "^15.2.2",

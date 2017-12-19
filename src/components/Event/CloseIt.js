@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
+import { connect } from 'react-redux';
 import MdHighlightOff from 'react-icons/lib/md/highlight-off';
 import './CloseIt.css';
+import { closeEvent } from '../../actions/event'
 
 
 
@@ -11,11 +14,11 @@ class CloseIt extends Component {
     console.log(this.props)
   	const closeEvent = this.props.closeEvent;
     return (
-    <a href="#" id="close-it" className="event-info--close js-close-sidebar" onClick={() => closeEvent()}>
+    <a id="close-it" className="event-info--close js-close-sidebar" onClick={() => this.props.closeEvent(this.props.history)}>
     	<MdHighlightOff size={40} />
     </a>
     );
   }
 }
 
-export default CloseIt;
+export default connect(null, {closeEvent})(CloseIt);

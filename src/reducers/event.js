@@ -1,24 +1,18 @@
-//action, store
-
-function changeEvent(state = [], action){
-	switch (action.type) {
-		case 'open_event' :
-            return state
-         default:
-            return state
-		}
-	}
-
-
-
-function event(state = [], action){
-	if (typeof action.event !== 'undefined'){
-		console.log(160)
-		console.log(action)
-		console.log(17)
-		return action.event
-	}
-	return state
+const initialState = {
+ 
 }
 
-export default event;
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case 'GET_EVENT_SUCCESS':
+      return action.event;
+    case 'CLOSE_EVENT':
+      const eventState = Object.assign({}, action.event, {openState:''});
+      console.log(eventState)
+      return eventState
+    default:
+      return state;
+  }
+}
+
+ 

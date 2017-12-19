@@ -1,0 +1,55 @@
+
+.itemDate {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 90px;
+}
+
+.itemTitle {
+    padding-left: 90px;
+    display: block;
+    position: relative;
+    font: 1.063rem/1.25 "Lucida Console",Monaco,monospace
+}
+
+.itemInner {
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.calenderEvent {
+    list-style:none
+}
+
+ .itemTime {
+    font: 1rem/1.25 "Lucida Console",Monaco,monospace;
+}
+
+.calenderEvent a {
+    color: #000;
+    display: block;
+    position: relative;
+
+}
+
+.calenderEvent a:hover {
+    color: #003da6;
+}
+
+.itemTitle h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 1.063rem/1.25 "Lucida Console",Monaco,monospace
+}
+
+.imageContainer{
+    height:40px
+}
+
+.imageContainer img{
+    height:100%
+}

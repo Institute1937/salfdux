@@ -1,27 +1,13 @@
 import React from 'react';
-
-import { render } from 'react-dom';
-
-import App from './components/App.js';
-
-import { Router, Route, IndexRoute, browserHistory} from 'react-router';
-
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store, { history } from './store.js'
-
-console.log(store)
-console.log(App)
-
-const router = (
-	<Provider store={store}>
-	    <Router history={history}>
-	        <Route path="/" component={App}>
-	            <IndexRoute></IndexRoute>
-	            <Route path="/view/:eventId"></Route>
-       	    </Route>
- 	    </Router>
-	</Provider>
-	)
+import App from './components/App';
+import  store  from './store.js';
 
 
-render(router, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={ store }>
+    <App />
+  </Provider>, document.getElementById('root')
+);
+

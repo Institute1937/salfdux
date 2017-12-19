@@ -1,23 +1,23 @@
-import { createStore } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import {
+    createStore,
+    applyMiddleware,
+    combineReducers
+  } from 'redux';
+import thunk from 'redux-thunk';
 
-import rootReducer from './reducers/index.js';
+import events from './reducers/events';
+import event from './reducers/event';
 
-import events from './data/events.js';
-
-console.log(rootReducer)
-
-const defaultState = {
-	events,
-	event
-};
-
-console.log(defaultState)
-const store = createStore(rootReducer, defaultState);
-console.log(16)
-console.log(store)
-
-export const history = syncHistoryWithStore(browserHistory, store)
-
-export default store;
+  
+const reducers = combineReducers({
+    events,
+    event
+});
+const middleware = [thunk];
+  
+export default createStore(
+    reducers,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(...middleware)
+)
+  

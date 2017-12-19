@@ -1,24 +1,48 @@
-import { bindActionCreators } from 'redux';
+import React from 'react';
 import { connect } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+const classNames = require('classnames');
 
-import * as actionCreators from '../actions/actionCreators.js';
+import indexStyle from  '../css/index.css'
+import eventStyle from './Event.css'
 
-import Main from './First.js';
+import Event from './Event';
+import Calendar from './Calendar.js'
 
-function mapStateToProps(state){
-	console.log(state)
-	return {
-		posts: state.posts,
-		comments: state.comments,
-		events: state.events,
-		event: state.event
-	}
+const App = (props) => {
+
+  const rightHandStyle =  classNames(eventStyle.eventInfo, 
+    eventStyle.primaryColour, 
+    eventStyle[props.event.openState],
+    eventStyle[props.event.eventColourScheme]
+  );
+  
+
+  return (
+    <Router>
+        <div className={indexStyle.siteWrapper}>
+          <Route component={Calendar}/>
+          <div id="right-hand-side" className={rightHandStyle}>
+            <Switch>
+              <Route exact path="/" />
+              <Route path="/events/:id" event={props.event} component={Event} />
+            </Switch>
+          </div>
+        </div>
+    </Router>
+  );
 }
 
-function mapDispatchToProps(dispatch){
-	return bindActionCreators(actionCreators,dispatch)
+const mapStateToProps = (state) => {
+  console.log(state)
+  return ({
+      event: state.event
+    })
 }
 
-const App = connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, {})(App);
 
-export default App;

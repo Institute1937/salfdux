@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "grainy": "^1.0.7",
-    "hello-cards": "0.1.12",
+    "hello-cards": "0.1.13",
     "react-router-redux": "^4.0.8"
   },
   "devDependencies": {

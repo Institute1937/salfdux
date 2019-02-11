@@ -47,7 +47,7 @@
     "prettier": "^1.7.4",
     "promise": "8.0.1",
     "react": "^15.6.1",
-    "react-dev-utils": "^4.1.0",
+    "react-dev-utils": "^7.0.3",
     "react-dom": "^15.6.1",
     "react-icons": "^2.2.7",
     "react-redux": "^5.0.6",

@@ -4,7 +4,7 @@
   "description": "template",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.0",
     "grainy": "^1.0.7",
     "hello-cards": "0.1.12",
     "react-router-redux": "^4.0.8"
